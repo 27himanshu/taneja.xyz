@@ -1,0 +1,293 @@
+:root,
+:root.darktheme {
+    /* Tab Bar */
+    --ht-tab-bar-margin: 1px;
+    --ht-tab-bar-padding: 0;
+    --ht-tab-bar-border-width: 1px;
+    --ht-tab-bar-border-style: solid;
+
+    /* Tab Button */
+    --ht-tab-button-margin: 1px;
+    --ht-tab-button-padding: 10px 12px;
+    --ht-tab-button-padding-horizontal: 12px;
+    --ht-tab-button-font-size: 12px;
+
+    /* Difftool Tab Button */
+    --ht-difftool-tab-button-padding: 3px 5px;
+
+    /* Difftool Tab Content */
+    --ht-difftool-monaco-container-padding: 5px;
+}
+
+:root {
+    /* Body */
+    --ht-body-background-color: #fff;
+    --ht-body-border-color: #fff;
+    --ht-body-color: #000;
+
+    /* Focus State */
+    --ht-focus-outline: 1px solid #00bfff;
+
+    /* Tab Bar */
+    --ht-tab-bar-border-color: #ccc;
+    --ht-tab-bar-background-color: #f1f1f1;
+
+    /* Tab Button */
+    --ht-tab-button-color: #000;
+    --ht-tab-button-hover-color: #ddd;
+    --ht-tab-button-active-color: #ccc;
+
+    /* About Tab */
+    --ht-about-copyright-color: #999;
+    --ht-about-text-color: #666;
+
+    /* Select and Button Tag */
+    --ht-native-button-background-color: #e8e6e3;
+    --ht-native-button-border-color: #b9b9b9;
+    --ht-native-button-color: #181a1b;
+}
+
+:root.darktheme {
+    /* Body */
+    --ht-body-background-color: #181a1b;
+    --ht-body-border-color: #736b5e;
+    --ht-body-color: #e8e6e3;
+
+    /* Focus State */
+    --ht-focus-outline: 1px solid #00bfff;
+
+    /* Tab Bar */
+    --ht-tab-bar-border-color: #3e4446;
+    --ht-tab-bar-background-color: #202324;
+
+    /* Tab Button */
+    --ht-tab-button-color: #e8e6e3;
+    --ht-tab-button-hover-color: #2b2f31;
+    --ht-tab-button-active-color: #35393b;
+
+    /* About Tab */
+    --ht-about-copyright-color: #666;
+    --ht-about-text-color: #999;
+
+    /* Select and Button Tag */
+    --ht-native-button-background-color: #181a1b;
+    --ht-native-button-border-color: #736b5e;
+    --ht-native-button-color: #e8e6e3;
+}
+
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--ht-body-background-color, #fff);
+    color: var(--ht-body-color, #000);
+    font-family: sans-serif;
+}
+
+.ht-hidden {
+    display: none !important;
+}
+
+/* Select Tag */
+select,
+button {
+    background-color: var(--ht-native-button-background-color, #e8e6e3);
+    color: var(--ht-native-button-color, #181a1b);
+    border: 1px solid;
+    border-color: var(--ht-native-button-border-color, #1f2021);
+    font-size: var(--ht-tab-button-font-size, 12px);
+    min-width: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Main Container */
+
+body>div.ht-main-container {
+    /* Hide until loaded */
+    display: none;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+}
+
+/* Tab Bar */
+ul.ht-tab-bar {
+    display: flex;
+    flex-grow: 0;
+    list-style-type: none;
+    margin: var(--ht-tab-bar-margin, 1px);
+    padding: var(--ht-tab-bar-padding, 0);
+    border-width: var(--ht-tab-bar-border-width, 1px);
+    border-style: var(--ht-tab-bar-border-style, solid);
+    border-color: var(--ht-tab-bar-border-color, #ccc);
+    background-color: var(--ht-tab-bar-background-color, #f1f1f1);
+    min-width: 0;
+}
+
+ul.ht-tab-bar li {
+    flex-grow: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+ul.ht-tab-bar li.empty-space {
+    flex-grow: 1;
+}
+
+
+/* Tab Button */
+ul.ht-tab-bar li a {
+    display: inline-block;
+    text-align: center;
+    color: var(--ht-tab-button-color, #000);
+    padding: var(--ht-tab-button-padding, 10px 12px);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: var(--ht-tab-button-font-size, 12px);
+    margin: var(--ht-tab-button-margin, 1px);
+}
+
+/* Change background color of links on hover */
+ul.ht-tab-bar li a:hover {
+    background-color: var(--ht-tab-button-hover-color, #ddd);
+}
+
+/* Focus/active state */
+ul.ht-tab-bar li a:active,
+ul.ht-tab-bar li a.active {
+    background-color: var(--ht-tab-button-active-color, #ccc);
+}
+
+ul.ht-tab-bar li a:focus {
+    outline: var(--ht-focus-outline, 1px solid #00bfff);
+}
+
+/* Tab Content */
+.ht-tab-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 12px;
+    border-width: var(--ht-tab-bar-border-width, 1px);
+    border-style: var(--ht-tab-bar-border-style, solid);
+    border-color: var(--ht-tab-bar-border-color, #ccc);
+    margin: var(--ht-tab-bar-margin, 1px);
+}
+
+
+/* About Tab */
+
+.ht-about-copyright-text {
+    color: var(--ht-about-copyright-color, #999);
+}
+
+.ht-about-text {
+    color: var(--ht-about-text-color, #666);
+}
+
+
+
+
+
+
+
+/* remove padding on small screens */
+/* .main-container.col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+} */
+
+.ht-home-container .ht-home-title {
+    font-family: monospace;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.ht-home-terminal-bar {
+    /* text-align: center; */
+    height: 25px;
+    max-width: 800px;
+    background-color: #DAD9D9;
+    margin: 0 auto;
+    font-family: monospace;
+    padding: auto;
+    float: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.ht-home-terminal-bar .red-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #e94b35;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.ht-home-terminal-bar .yellow-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #ab8300;
+    border-radius: 50%;
+    ;
+    margin: 5px;
+}
+
+.ht-home-terminal-bar .green-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #1AAF5C;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.ht-home-terminal-screen {
+    background-color: #33485E;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    /* padding: 1px; */
+    max-width: 800px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ht-home-terminal-screen .font {
+    color: #fff;
+    margin-left: 8px;
+    margin-bottom: 0px;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    position: static;
+}
+
+.ht-home-terminal-screen .output {
+    color: #e4e4e4;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    position: static;
+}
+
+.ht-home-terminal-screen .output a {
+    color: #e4e4e4;
+    /* text-decoration: none; */
+}

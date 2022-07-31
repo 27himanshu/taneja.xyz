@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html class="darktheme" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Himanshu Taneja</title>
+    <meta name="description" content="">
+    <meta name="author" content="taneja.xyz">
+    <meta property="og:title" content="Himanshu Taneja">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taneja.xyz/">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="resources/icons/icon.png">
+    <link rel="icon" href="./resources/icons/favicon.ico">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="ht-main-container">
+        <!-- Tab Bar -->
+        <ul class="ht-tab-bar">
+            <li><a href="javascript:void(0);" class="ht-tab-button" data-tab-id="about">About</a></li>
+            <li><a href="javascript:void(0);" class="ht-tab-button" data-tab-id="resume">Resume</a></li>
+            <li class="empty-space"></li>
+            <li><a href="javascript:void(0);" class="ht-tab-button" data-tab-id="theme">Dark Theme</a></li>
+        </ul>
+
+        <!-- Tab Content -->
+
+        <!-- Diff Tool -->
+        <div class="ht-tab-content" data-tab-content-id="about">
+            <div class="ht-home-container">
+                <div>
+                    <h1 class="ht-home-title">Hello, World! I'm a Software Engineer</h1>
+                    <div class="ht-home-terminal-bar">
+                        <span class="red-dot"></span>
+                        <span class="yellow-dot"></span>
+                        <span class="green-dot"></span>
+                    </div>
+                    <div class="ht-home-terminal-screen" id="screen">
+                        <p class="font">$ dev.name</p>
+                        <p class="output">himanshu taneja</p>
+                        <p class="font">$ dev.work</p>
+                        <p class="output"><a href="https://meta.com" target="_blank">meta</a>
+                        </p>
+                        <p class="font">$ dev.education</p>
+                        <p class="output"><a href="https://www.tamu.edu/" target="_blank">texas a&amp;m university</a>
+                        </p>
+                        <p class="font">$ dev.speaks</p>
+                        <p class="output">["php/hack", "javascript", "java", "c++", "python"]</p>
+                        <p class="font">$ dev.profiles</p>
+                        <p class="output">["<a href="https://linkedin.com/in/himanshu27" target="_blank">linkedin</a>",
+                            "<a href="https://github.com/27himanshu" target="_blank">github</a>"]
+                        </p>
+                        <p class="font">$ dev.contact</p>
+                        <p class="output"><a href="https://linkedin.com/in/himanshu27"
+                                target="_blank">himanshu@taneja.xyz</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume -->
+        <div class="ht-tab-content" data-tab-content-id="resume">
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <!-- requirejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
