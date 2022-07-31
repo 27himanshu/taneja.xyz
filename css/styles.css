@@ -11,12 +11,6 @@
     --ht-tab-button-padding: 10px 12px;
     --ht-tab-button-padding-horizontal: 12px;
     --ht-tab-button-font-size: 12px;
-
-    /* Difftool Tab Button */
-    --ht-difftool-tab-button-padding: 3px 5px;
-
-    /* Difftool Tab Content */
-    --ht-difftool-monaco-container-padding: 5px;
 }
 
 :root {
