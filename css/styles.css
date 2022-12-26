@@ -168,7 +168,6 @@ ul.ht-tab-bar li a:focus {
 .ht-tab-content {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
     padding: 6px 12px;
     border-width: var(--ht-tab-bar-border-width, 1px);
     border-style: var(--ht-tab-bar-border-style, solid);
@@ -176,6 +175,16 @@ ul.ht-tab-bar li a:focus {
     margin: var(--ht-tab-bar-margin, 1px);
 }
 
+/* Tab content overrides for resmue */
+.ht-tab-content.content-pane-resume {
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Tab content overrides for resmue */
+.ht-tab-content.content-pane-about {
+    flex-direction: column;
+}
 
 /* About Tab */
 
@@ -189,15 +198,6 @@ ul.ht-tab-bar li a:focus {
 
 
 
-
-
-
-
-/* remove padding on small screens */
-/* .main-container.col-sm-12 {
-    padding-left: 0px;
-    padding-right: 0px;
-} */
 
 .ht-home-container .ht-home-title {
     font-family: monospace;
