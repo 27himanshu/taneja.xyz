@@ -81,7 +81,10 @@ require([
     tabContents[i].classList.add('ht-hidden');
   }
 
-  const selectedTabId = localStorage.getItem('selectedTabId') || 'about';
+  let selectedTabId = localStorage.getItem('selectedTabId') || 'about';
+  if (['about','resume'].indexOf(selectedTabId)<0) {
+    selectedTabId = 'about';
+  }
   const selectedTabContent = document.querySelector(`.ht-tab-content[data-tab-content-id="${selectedTabId}"]`);
   selectedTabContent.classList.remove('ht-hidden');
 

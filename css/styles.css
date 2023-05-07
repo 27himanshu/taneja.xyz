@@ -14,6 +14,8 @@
 }
 
 :root {
+    /* Border Radius */
+    --dt-border-radius: 7px;
     /* Body */
     --ht-body-background-color: #fff;
     --ht-body-border-color: #fff;
@@ -123,6 +125,7 @@ ul.ht-tab-bar {
     border-color: var(--ht-tab-bar-border-color, #ccc);
     background-color: var(--ht-tab-bar-background-color, #f1f1f1);
     min-width: 0;
+    border-radius: var(--dt-border-radius);
 }
 
 ul.ht-tab-bar li {
@@ -130,6 +133,7 @@ ul.ht-tab-bar li {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    border-radius: var(--dt-border-radius);
 }
 
 ul.ht-tab-bar li.empty-space {
@@ -152,16 +156,19 @@ ul.ht-tab-bar li a {
 /* Change background color of links on hover */
 ul.ht-tab-bar li a:hover {
     background-color: var(--ht-tab-button-hover-color, #ddd);
+    border-radius: var(--dt-border-radius);
 }
 
 /* Focus/active state */
 ul.ht-tab-bar li a:active,
 ul.ht-tab-bar li a.active {
     background-color: var(--ht-tab-button-active-color, #ccc);
+    border-radius: var(--dt-border-radius);
 }
 
 ul.ht-tab-bar li a:focus {
     outline: var(--ht-focus-outline, 1px solid #00bfff);
+    border-radius: var(--dt-border-radius);
 }
 
 /* Tab Content */
@@ -173,6 +180,7 @@ ul.ht-tab-bar li a:focus {
     border-style: var(--ht-tab-bar-border-style, solid);
     border-color: var(--ht-tab-bar-border-color, #ccc);
     margin: var(--ht-tab-bar-margin, 1px);
+    border-radius: var(--dt-border-radius);
 }
 
 /* Tab content overrides for resmue */
