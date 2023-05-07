@@ -2,7 +2,7 @@ define([
 ], () => {
   home = {
     setupResumeTab: (target) => {
-      if (this._setup) return;
+      if (this._setup || true) return;
       iframe = document.createElement('iframe');
       iframe.src = '/resources/data/resume.pdf';
       iframe.style.height = '100%';
