@@ -9,6 +9,7 @@ require([
   'ht/about',
   'ht/resume',
 ], (about, resume) => {
+  const VALID_TAB_ITEM_IDS = ['about', /* 'resume' */]; 
   const setupSessionPersistence = () => {
     window.addEventListener('visibilitychange', (event) => {
       // get selected tab
@@ -82,7 +83,7 @@ require([
   }
 
   let selectedTabId = localStorage.getItem('selectedTabId') || 'about';
-  if (['about','resume'].indexOf(selectedTabId)<0) {
+  if (VALID_TAB_ITEM_IDS.indexOf(selectedTabId)<0) {
     selectedTabId = 'about';
   }
   const selectedTabContent = document.querySelector(`.ht-tab-content[data-tab-content-id="${selectedTabId}"]`);
@@ -97,6 +98,7 @@ require([
   for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].addEventListener('click', (evt) => {
       goToTab(evt, tabButtons[i].dataset.tabId);
+      evt.preventDefault();
     });
   }
 

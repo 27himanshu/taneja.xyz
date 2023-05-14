@@ -78,6 +78,8 @@ html {
 }
 
 body {
+    /* Add zero margin to top and bottom to prevent scrollbar on body */
+    margin: 0 10px;
     background-color: var(--ht-body-background-color, #fff);
     color: var(--ht-body-color, #000);
     font-family: sans-serif;
@@ -111,6 +113,7 @@ body>div.ht-main-container {
     flex-direction: column;
     height: 95%;
     width: 100%;
+    padding-top: 10px;
 }
 
 /* Tab Bar */
